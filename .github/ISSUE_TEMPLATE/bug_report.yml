@@ -1,0 +1,89 @@
+name: Bug Report
+description: Report a bug with jan-terminal-mcp
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the form below as completely as possible.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: When I run `run_shell`, it...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How do we reproduce this?
+      placeholder: |
+        1. Open Jan
+        2. Ask the model to run...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool is affected?
+      options:
+        - run_shell
+        - git
+        - read_file
+        - write_file
+        - edit_file
+        - list_dir
+        - run_file
+        - run_code
+        - run_python
+        - run_cpp
+        - Not tool-specific / other
+    validations:
+      required: true
+
+  - type: input
+    id: jan-version
+    attributes:
+      label: Jan AI version
+      placeholder: e.g. v0.7.9
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Model being used
+      description: Are you using the fine-tuned jancoder-4b or another model?
+      placeholder: e.g. jancoder-4b-gguf / llama-3.2-3b
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS version
+      placeholder: e.g. Windows 11
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output / logs
+      description: Paste any error messages or MCP logs here.
+      render: shell
