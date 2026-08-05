@@ -5,6 +5,7 @@ Exposes shell, git, file system, and code execution tools to Jan AI via MCP.
 
 import asyncio
 import os
+import shlex
 import subprocess
 import sys
 import tempfile
@@ -82,13 +83,13 @@ def run_shell(command: str, cwd: str = "") -> str:
 
 @server.tool()
 def git(args: str, cwd: str = "") -> str:
-    """Run a git command. args = e.g. 'status', 'log --oneline -10', 'commit -m msg'"""
+    """Run a git command. args = e.g. 'status', 'log --oneline -10', 'commit -m "fix bug"'"""
     blocked, pattern = _is_dangerous(args)
     if blocked:
         return f"BLOCKED: dangerous pattern '{pattern}'."
     try:
         result = subprocess.run(
-            ["git"] + args.split(),
+            ["git"] + shlex.split(args),
             capture_output=True, text=True,
             cwd=cwd or os.getcwd(), timeout=30
         )
