@@ -64,6 +64,10 @@ Or edit `%APPDATA%\Jan\data\mcp_config.json` directly and add the block above in
 - Jan AI v0.7.9+
 - `pip install mcp>=2.0.0`
 
+##Bugs
+
+Report bugs and stuff to [ISSUE](https://github.com/Trigodil/jan-terminal-mcp/tree/main/.github/ISSUE_TEMPLATE)
+
 ## License
 
 MIT
