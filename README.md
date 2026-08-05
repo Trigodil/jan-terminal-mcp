@@ -23,7 +23,7 @@ Includes a [fine-tuned 4B model](#fine-tuned-model) trained specifically to call
 
 ## Fine-tuned model
 
-[AItrainer1/jancoder-4b-gguf](https://huggingface.co/AItrainer1/jancoder-4b-gguf) — a 4B model fine-tuned via QLoRA on tool-use conversations generated specifically for this tool schema.
+[AItrainer1/jancoder-4b-gguf](https://huggingface.co/AItrainer1/jancoder-4b-gguf) a 4B model fine-tuned via QLoRA on tool-use conversations generated specifically for this tool schema.
 
 Stock models at this size tend to describe what they'd do rather than actually calling tools. This model was trained to call them correctly and consistently.
 
@@ -39,7 +39,7 @@ pip install jan-terminal-mcp
 
 ## Setup in Jan AI
 
-1. Open Jan → **Settings → MCP Servers**
+1. Open Jan, **Settings, MCP Servers**
 2. Click **Add** and paste this config:
 
 ```json
@@ -55,7 +55,7 @@ pip install jan-terminal-mcp
 
 Or edit `%APPDATA%\Jan\data\mcp_config.json` directly and add the block above inside `"mcpServers"`.
 
-3. Restart Jan — the server appears as **Jan-Terminal** with a green dot.
+3. Restart Jan - the server appears as **Jan-Terminal** with a green dot.
 
 ## Requirements
 
