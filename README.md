@@ -21,7 +21,7 @@ Every operation shows a **user approval prompt** before anything runs on your ma
 
 ## Fine-tuned model
 
-[AItrainer1/jancoder-4b-gguf](https://huggingface.co/AItrainer1/jancoder-4b-gguf) — Jan-code-4b fine-tuned on tool-use conversations via QLoRA. Drop the GGUF into Jan and it reliably calls tools instead of explaining them.
+[AItrainer1/jancoder-4b-gguf](https://huggingface.co/AItrainer1/jancoder-4b-gguf) - Jan-code-4b fine tuned on tool-use conversations via QLoRA. Drop the GGUF into Jan and it reliably calls tools instead of explaining them.
 
 The Kaggle training notebook is at [`kaggle_finetune.ipynb`](kaggle_finetune.ipynb).
 
