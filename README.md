@@ -14,10 +14,10 @@ Every operation shows a **user approval prompt** before anything runs on your ma
 | `read_file` | Read any file's contents |
 | `write_file` | Write or overwrite a file |
 | `list_dir` | List files and folders in a directory |
-| `edit_file` | Replace a specific substring in a file — use this to fix errors instead of rewriting the whole file |
+| `edit_file` | Replace a specific substring in a file - use this to fix errors instead of rewriting the whole file |
 | `run_python` | Execute Python code directly and return output |
 | `run_cpp` | Compile and run C++ code (g++ or MSVC), returns errors + output |
-| `run_code` | Execute code in **any** language — Python, JavaScript, TypeScript, Java, C++, C#, Go, Rust, Ruby, PHP, R, Kotlin, Swift, MATLAB |
+| `run_code` | Execute code in **any** language - Python, JavaScript, TypeScript, Java, C++, C#, Go, Rust, Ruby, PHP, R, Kotlin, Swift, MATLAB |
 
 ## Fine-tuned model
 
