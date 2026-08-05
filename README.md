@@ -33,7 +33,7 @@ pip install jan-terminal-mcp
 
 ## Setup in Jan AI
 
-1. Open Jan → **Settings → MCP Servers**
+1. Open Jan,  **Settings, MCP Servers**
 2. Click **Add** and paste this config:
 
 ```json
@@ -57,7 +57,7 @@ When Jan's model calls a tool, a Windows dialog appears asking for your approval
 
 - `run_shell` / `git` → warning popup showing the exact command
 - `write_file` → warning popup with a content preview
-- `read_file` / `list_dir` → info popup
+- `read_file` / `list_dir` , info popup
 
 Click **Allow** to proceed or **Deny** to cancel. Jan's own built-in approval UI also fires, so you get a double layer of confirmation.
 
