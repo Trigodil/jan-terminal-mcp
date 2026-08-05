@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jan-terminal-mcp"
+version = "0.1.0"
+description = "Terminal, shell, git and file system MCP tools for Jan AI — with built-in user approval prompts"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["jan", "mcp", "terminal", "shell", "git", "ai", "local-ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "mcp>=2.0.0",
+]
+
+[project.scripts]
+jan-terminal-mcp = "jan_terminal_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/ayushsreejith/jan-terminal-mcp"
+Issues = "https://github.com/ayushsreejith/jan-terminal-mcp/issues"
