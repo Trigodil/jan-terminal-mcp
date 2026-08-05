@@ -6,9 +6,6 @@ An [MCP](https://www.jan.ai/docs/desktop/mcp) server that gives your local Jan m
 
 Includes a [fine-tuned 4B model](#fine-tuned-model) trained specifically to call these tools reliably instead of just describing what it would do.
 
-## Why this exists
-
-Out of the box, Jan can talk about code but can't run it. It can suggest shell commands but can't execute them. This project fills that gap — giving your local model the ability to actually interact with your computer, without sending anything to the cloud.
 
 ## Tools
 
