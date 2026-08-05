@@ -1,9 +1,14 @@
 # jan-terminal-mcp
 
-A [Model Context Protocol (MCP)](https://www.jan.ai/docs/desktop/mcp) server for [Jan AI](https://jan.ai) that gives your local model real terminal access shell commands, git, file read/write, and directory listing.
+**Jan AI has no native terminal or code execution. This gives it that.**
 
-Every operation shows a **user approval prompt** before anything runs on your machine.
+An [MCP](https://www.jan.ai/docs/desktop/mcp) server that gives your local Jan model real hands on your machine — run shell commands, execute code in 14 languages, read/write files, and use git. All locally, all private.
 
+Includes a [fine-tuned 4B model](#fine-tuned-model) trained specifically to call these tools reliably instead of just describing what it would do.
+
+## Why this exists
+
+Out of the box, Jan can talk about code but can't run it. It can suggest shell commands but can't execute them. This project fills that gap — giving your local model the ability to actually interact with your computer, without sending anything to the cloud.
 
 ## Tools
 
@@ -14,14 +19,18 @@ Every operation shows a **user approval prompt** before anything runs on your ma
 | `read_file` | Read any file's contents |
 | `write_file` | Write or overwrite a file |
 | `list_dir` | List files and folders in a directory |
-| `edit_file` | Replace a specific substring in a file - use this to fix errors instead of rewriting the whole file |
+| `edit_file` | Replace a specific substring in a file — smarter than rewriting the whole thing |
 | `run_python` | Execute Python code directly and return output |
-| `run_cpp` | Compile and run C++ code (g++ or MSVC), returns errors + output |
-| `run_code` | Execute code in **any** language - Python, JavaScript, TypeScript, Java, C++, C#, Go, Rust, Ruby, PHP, R, Kotlin, Swift, MATLAB |
+| `run_cpp` | Compile and run C++ code (g++), returns errors + output |
+| `run_code` | Execute code in **any** language — Python, JavaScript, TypeScript, Java, C++, C#, Go, Rust, Ruby, PHP, R, Kotlin, Swift, MATLAB |
 
 ## Fine-tuned model
 
-[AItrainer1/jancoder-4b-gguf](https://huggingface.co/AItrainer1/jancoder-4b-gguf) - Jan-code-4b fine tuned on tool-use conversations via QLoRA. Drop the GGUF into Jan and it reliably calls tools instead of explaining them.
+[AItrainer1/jancoder-4b-gguf](https://huggingface.co/AItrainer1/jancoder-4b-gguf) — a 4B model fine-tuned via QLoRA on tool-use conversations generated specifically for this tool schema.
+
+Stock models at this size tend to describe what they'd do rather than actually calling tools. This model was trained to call them correctly and consistently.
+
+Drop the GGUF into Jan and it works out of the box with this MCP server.
 
 The Kaggle training notebook is at [`kaggle_finetune.ipynb`](kaggle_finetune.ipynb).
 
@@ -33,7 +42,7 @@ pip install jan-terminal-mcp
 
 ## Setup in Jan AI
 
-1. Open Jan,  **Settings, MCP Servers**
+1. Open Jan → **Settings → MCP Servers**
 2. Click **Add** and paste this config:
 
 ```json
@@ -53,7 +62,7 @@ Or edit `%APPDATA%\Jan\data\mcp_config.json` directly and add the block above in
 
 ## Requirements
 
-- Windows (uses native Win32 dialog for approval prompts)
+- Windows (PowerShell required for `run_shell`)
 - Python 3.10+
 - Jan AI v0.7.9+
 - `pip install mcp>=2.0.0`
