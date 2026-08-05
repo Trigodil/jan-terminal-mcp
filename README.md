@@ -55,8 +55,8 @@ Or edit `%APPDATA%\Jan\data\mcp_config.json` directly and add the block above in
 
 When Jan's model calls a tool, a Windows dialog appears asking for your approval **before** anything runs:
 
-- `run_shell` / `git` → warning popup showing the exact command
-- `write_file` → warning popup with a content preview
+- `run_shell` / `git` , warning popup showing the exact command
+- `write_file` , warning popup with a content preview
 - `read_file` / `list_dir` , info popup
 
 Click **Allow** to proceed or **Deny** to cancel. Jan's own built-in approval UI also fires, so you get a double layer of confirmation.
