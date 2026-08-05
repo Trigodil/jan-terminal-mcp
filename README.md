@@ -4,7 +4,6 @@ A [Model Context Protocol (MCP)](https://www.jan.ai/docs/desktop/mcp) server for
 
 Every operation shows a **user approval prompt** before anything runs on your machine.
 
-![approval](https://raw.githubusercontent.com/ayushsreejith/jan-terminal-mcp/main/assets/approval.png)
 
 ## Tools
 
