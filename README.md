@@ -1,6 +1,6 @@
 # jan-terminal-mcp
 
-A [Model Context Protocol (MCP)](https://www.jan.ai/docs/desktop/mcp) server for [Jan AI](https://jan.ai) that gives your local model real terminal access — shell commands, git, file read/write, and directory listing.
+A [Model Context Protocol (MCP)](https://www.jan.ai/docs/desktop/mcp) server for [Jan AI](https://jan.ai) that gives your local model real terminal access shell commands, git, file read/write, and directory listing.
 
 Every operation shows a **user approval prompt** before anything runs on your machine.
 
